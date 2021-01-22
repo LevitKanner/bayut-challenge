@@ -21,7 +21,6 @@ class API {
                 let data = try decoder.decode(Listings.self, from: data!)
                 DispatchQueue.main.async {
                     closure(data)
-                    print(data)
                 }
             }catch {
                 debugPrint(error)
